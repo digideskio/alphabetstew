@@ -1,7 +1,12 @@
 Alphabetstew::Application.routes.draw do
-  get "home/index"
+  resources :characters
 
-  root :to => 'home#index'
+   devise_for :users do 
+     get '/users/sign_out' => 'devise/sessions#destroy' 
+   end
+
+  root :to => "home#index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

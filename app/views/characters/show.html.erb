@@ -1,0 +1,13 @@
+<div class="well">
+	<p>
+		<%= @character.description %>
+	</p>
+	<p>
+		<%= @character.user.name %>
+	</p>
+	<% if current_user == @character.user %>
+	<%= link_to 'Edit', edit_character_path(@character) %> |
+	<% end %>
+	<%= link_to 'Back', characters_path %>
+	
+</div>

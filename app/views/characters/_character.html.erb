@@ -1,0 +1,8 @@
+<tr>
+	<td><%= character.description %></td>
+	<td><%= link_to 'Show', character %></td>
+	<% if current_user == character.user %>
+		<td><%= link_to 'Edit', edit_character_path(character) %></td>
+		<td><%= link_to 'Destroy', character, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	<% end %>
+</tr>
