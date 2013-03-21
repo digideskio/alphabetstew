@@ -1,5 +1,10 @@
-<div class="well">
-	<h1>Hello, Rails!</h1>
-	<%= link_to 'Create Account', new_user_registration_path, class: 'btn btn-primary' %>
+<div class="row">
+	<div class="panel">
+		<h1>Alphabet Stew</h1>
+		<p>Upload your images of letters. Tag them. Make cool looking words.</p>
+		<% if user_signed_in? == false%>
+		<%= link_to 'Create Account', new_user_registration_path, class: 'small button radius' %>
+		<% end %>
+	</div>
 </div>
 

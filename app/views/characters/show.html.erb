@@ -1,9 +1,9 @@
-<div class="well">
+<div class="row">
 	<p>
 		<%= @character.description %>
 	</p>
 	<p>
-		<%= @character.user.name %>
+		Uploaded by <%= @character.user.name %>
 	</p>
 	<% if current_user == @character.user %>
 	<%= link_to 'Edit', edit_character_path(@character) %> |
