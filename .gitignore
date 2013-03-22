@@ -16,3 +16,6 @@
 *.class
 *.pyc
 *.pyo
+
+#Ignore the images
+/public/system

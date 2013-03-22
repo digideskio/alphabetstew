@@ -1,6 +1,9 @@
 <%= simple_form_for(@character) do |f| %>
 	<%= f.error_notification %>
+	<%= f.full_error :image_file_size, class: "error" %>
+	<%= f.full_error :image_content_type, class: "error" %>
 	<div class="large-5 small-9">
+		<%= f.input :image, label: "Upload an Image" %>
 		<%= f.input :description, label: "What letter is it?", placeholder: 'A, B, C, etc.' %>
 	</div>
 	<%= f.button :submit, class:"button" %>

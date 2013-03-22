@@ -1,4 +1,5 @@
 <tr>
+	<td><%= image_tag character.image %></td>
 	<td><%= character.description %></td>
 	<td><%= link_to 'Show', character %></td>
 	<% if current_user == character.user %>
