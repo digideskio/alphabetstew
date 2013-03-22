@@ -38,4 +38,7 @@ Alphabetstew::Application.configure do
   #Papaerclip
   Paperclip.options[:command_path] = "/usr/local/bin/"
   
+  # Mailer
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  
 end
