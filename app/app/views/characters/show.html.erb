@@ -1,0 +1,13 @@
+<div class="row">
+	<%= image_tag @character.image(:medium) %>
+	<p>
+		<%= @character.description %>
+	</p>
+	<p>
+		Uploaded by <%= @character.user.name %>
+	</p>
+	<% if current_user == @character.user %>
+	<%= link_to 'Edit', edit_character_path(@character) %> |
+	<% end %>
+	<%= link_to 'Back', characters_path %>
+</div>
