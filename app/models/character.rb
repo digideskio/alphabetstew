@@ -1,7 +1,6 @@
 class Character < ActiveRecord::Base
   attr_accessible :description, :image
   
-  
   validates :description, presence: true
   validates :user_id, presence: true
   validates_attachment :image, presence: true, 
@@ -9,7 +8,5 @@ class Character < ActiveRecord::Base
                                size: {less_than: 5.megabytes}
   
   belongs_to :user
-  #has_attached_file :image, styles:{ medium: "300x300>"}
   has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }
-
 end
